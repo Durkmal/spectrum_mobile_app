@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import './main_menu.dart';
+import './recipe_menu.dart';
+import './settings_menu.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,6 +13,9 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _currentBody = "Main Menu";
+
+  //Temp var, user auth should be seperated into more classes
+  final signIn = GoogleSignIn(scopes: []);
 
   @override
   Widget build(BuildContext context) {
@@ -70,9 +76,9 @@ class _MyAppState extends State<MyApp> {
     if (_currentBody == "Main Menu") {
       return MainMenu();
     } else if (_currentBody == "Recipes") {
-      return MainMenu(); //Return recipe widget
+      return RecipeMenu(); //Return recipe widget
     } else {
-      return MainMenu(); //Return settings widget
+      return SettingsMenu(); //Return settings widget
     }
   }
 }

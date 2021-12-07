@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class RecipeMenu extends StatefulWidget {
+class SettingsMenu extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _RecipeMenuState();
+  State<StatefulWidget> createState() => _SettingsMenuState();
 }
 
-class _RecipeMenuState extends State<RecipeMenu> {
+class _SettingsMenuState extends State<SettingsMenu> {
   @override
   Widget build(BuildContext context) {
     return Column(
